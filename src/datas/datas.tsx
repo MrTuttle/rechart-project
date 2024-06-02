@@ -51,6 +51,29 @@ export const data3 = [
   },
 ];
 
+export const data3bis = [
+  {
+    name: "Page A",
+    pv: 1300,
+    uv: 4200,
+  },
+  {
+    name: "Page B",
+    pv: 12098,
+    uv: 10500,
+  },
+  {
+    name: "Page C",
+    pv: 13000,
+    uv: 9000,
+  },
+  {
+    name: "Page D",
+    pv: 12308,
+    uv: 14780,
+  },
+];
+
 export const data4 = [
   {
     name: "Group A",

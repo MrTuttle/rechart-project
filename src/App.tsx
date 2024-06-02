@@ -12,7 +12,7 @@ import {
 import CustomAreaChartCurves from "./components/CustomAreaChartCurves";
 import CustomBarChart from "./components/CustomBarChart";
 
-import { data, data2, data3, data4, data5 } from "./datas/datas";
+import { data, data2, data3, data3bis, data4, data5 } from "./datas/datas";
 import CustomPieChart from "./components/CustomPieChart";
 import { useState } from "react";
 
@@ -22,6 +22,7 @@ function App() {
   const styleBtActive =
     "px-2 py-1 border border-slate-400 text-xs hover:border-slate-300 cursor-pointer text-slate-400 hover:text-slate-300";
   const [bt, setBt] = useState(false);
+  const [btBar, setBtBar] = useState(false);
 
   return (
     <>
@@ -29,7 +30,7 @@ function App() {
         <div id="grid" className="   bg-slate-900 overflow-hidden py-20">
           <div className="grid gap-4 px-4 max-w-screen-xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 m-auto text-slate-600">
             <div className="flex items-center flex-col justify-center border  rounded-md border-slate-700 hover:border-slate-950 bg-slate-900 hover:bg-slate-950 pt-8 hover:pt-7 pb-0 hover:pb-1 transition-all">
-              <div className="px-4 text-slate-400 font-light mb-4">
+              <div className="px-4 text-slate-400 font-light mb-4 h-28">
                 <h1 className="text-xl">Données 2021</h1>
                 <h2>
                   {!bt
@@ -61,27 +62,66 @@ function App() {
             </div>
 
             <div className="flex items-center flex-col justify-center border  rounded-md border-slate-700 hover:border-slate-950 bg-slate-900 hover:bg-slate-950 pt-8 hover:pt-7 pb-0 hover:pb-1 transition-all">
-              <div className="px-4 text-slate-400 font-light">
-                <h1 className="text-xl">Données 2022</h1>
+              <div className="px-4 text-slate-400 font-light mb-4 h-28">
+                <h1 className="text-xl">Données 2021</h1>
                 <h2>
-                  Après un début de saison difficile, les bleus se re-saisissent
-                  et reprennent le dessus
+                  {!bt
+                    ? "Forte reprise des bleus après la chute en milieu d'Année"
+                    : "Après un début de saison difficile, les bleus se re-saisissent et reprennent le dessus"}
                 </h2>
               </div>
-              <div className="w-full  h-56 max-w-lg border-slate-950 pt-8 rounded-md">
-                <CustomAreaChartCurves data={data2} />
+              <div className="flex justify-end px-4 gap-2 w-full">
+                <div
+                  className={bt ? styleBt : styleBtActive}
+                  onClick={() => {
+                    setBt(!bt);
+                  }}
+                >
+                  Data 1
+                </div>
+                <div
+                  className={bt ? styleBtActive : styleBt}
+                  onClick={() => {
+                    setBt(!bt);
+                  }}
+                >
+                  Data 2
+                </div>
+              </div>
+              <div className="w-full  h-56 max-w-lg pt-8 rounded-md">
+                <CustomAreaChartCurves data={!bt ? data : data2} />
               </div>
             </div>
 
             <div className="flex items-center flex-col justify-center border  rounded-md border-slate-700 hover:border-slate-950 bg-slate-900 hover:bg-slate-950 pt-8 hover:pt-7 pb-0 hover:pb-1 transition-all">
-              <div className="px-4 text-slate-400 font-light">
-                <h1 className="text-xl">Données 2023</h1>
+              <div className="px-4 text-slate-400 font-light mb-4 h-28">
+                <h1 className="text-xl">CustomBarChart</h1>
                 <h2>
-                  Forte reprise des bleus après la chute en milieu d'Année
+                  {!btBar
+                    ? "Boutons a revoir pour une meilleure expérience utilisateur"
+                    : "Il faut gérer un état inactif et un état actif pour les boutons"}
                 </h2>
               </div>
-              <div className="w-full  h-56 max-w-lg border-slate-950 pt-8 rounded-md">
-                <CustomBarChart data={data3} />
+              <div className="flex justify-end px-4 gap-2 w-full">
+                <div
+                  className={btBar ? styleBt : styleBtActive}
+                  onClick={() => {
+                    setBtBar(!btBar);
+                  }}
+                >
+                  Data 1
+                </div>
+                <div
+                  className={btBar ? styleBtActive : styleBt}
+                  onClick={() => {
+                    setBtBar(!btBar);
+                  }}
+                >
+                  Data 2
+                </div>
+              </div>
+              <div className="w-full  h-56 max-w-lg pt-8 rounded-md">
+                <CustomBarChart data={!btBar ? data3 : data3bis} />
               </div>
             </div>
 
