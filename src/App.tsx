@@ -12,7 +12,16 @@ import {
 import CustomAreaChartCurves from "./components/CustomAreaChartCurves";
 import CustomBarChart from "./components/CustomBarChart";
 
-import { data, data2, data3, data3bis, data4, data5 } from "./datas/datas";
+import {
+  data,
+  data2,
+  data3,
+  data3bis,
+  data4,
+  data4bis,
+  data5,
+  data5bis,
+} from "./datas/datas";
 import CustomPieChart from "./components/CustomPieChart";
 import { useState } from "react";
 
@@ -23,6 +32,7 @@ function App() {
     "px-2 py-1 border border-slate-400 text-xs hover:border-slate-300 cursor-pointer text-slate-400 hover:text-slate-300";
   const [bt, setBt] = useState(false);
   const [btBar, setBtBar] = useState(false);
+  const [btPie, setBtPie] = useState(false);
 
   return (
     <>
@@ -122,6 +132,42 @@ function App() {
               </div>
               <div className="w-full  h-56 max-w-lg pt-8 rounded-md">
                 <CustomBarChart data={!btBar ? data3 : data3bis} />
+              </div>
+            </div>
+
+            <div className="flex items-center flex-col justify-center border  rounded-md border-slate-700 hover:border-slate-950 bg-slate-900 hover:bg-slate-950 pt-8 hover:pt-7 pb-0 hover:pb-1 transition-all">
+              <div className="px-4 text-slate-400 font-light mb-4 h-28">
+                <h1 className="text-xl">CustomPieChart</h1>
+                <h2>
+                  {!btPie
+                    ? "State a revoir"
+                    : "Il faut gérer un état inactif et un état actif pour les boutons"}
+                </h2>
+              </div>
+              <div className="flex justify-end px-4 gap-2 w-full">
+                <div
+                  className={btPie ? styleBt : styleBtActive}
+                  onClick={() => {
+                    setBtPie(!btPie);
+                  }}
+                >
+                  Data 1
+                </div>
+                <div
+                  className={btPie ? styleBtActive : styleBt}
+                  onClick={() => {
+                    setBtPie(!btPie);
+                  }}
+                >
+                  Data 2
+                </div>
+              </div>
+              <div className="w-full  h-56 max-w-lg pt-8 rounded-md">
+                {/* <CustomBarChart data={!btBar ? data3 : data3bis} /> */}
+                <CustomPieChart
+                  data4={!btPie ? data4 : data4bis}
+                  data5={!btPie ? data5 : data5bis}
+                />
               </div>
             </div>
 
