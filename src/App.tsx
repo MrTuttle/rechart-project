@@ -11,6 +11,7 @@ import {
 // import { AreaChartProps } from "recharts";
 import CustomAreaChartCurves from "./components/CustomAreaChartCurves";
 import CustomBarChart from "./components/CustomBarChart";
+import CustomPieChart from "./components/CustomPieChart";
 
 import {
   data,
@@ -22,7 +23,7 @@ import {
   data5,
   data5bis,
 } from "./datas/datas";
-import CustomPieChart from "./components/CustomPieChart";
+
 import { useState } from "react";
 
 function App() {
@@ -140,8 +141,8 @@ function App() {
                 <h1 className="text-xl">CustomPieChart</h1>
                 <h2>
                   {!btPie
-                    ? "State a revoir"
-                    : "Il faut gérer un état inactif et un état actif pour les boutons"}
+                    ? "Premier set de datas pour le graphique circulaire, a passer dans le child component"
+                    : "Second set de datas pour le graphique circulaire, les props passent bien dans le composant enfant. L'animation paraît plus lente que prévue, est-la forme qui donne cette impression ?."}
                 </h2>
               </div>
               <div className="flex justify-end px-4 gap-2 w-full">

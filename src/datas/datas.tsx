@@ -77,23 +77,23 @@ export const data3bis = [
 export const data4 = [
   {
     name: "Group A",
-    value: 400,
-  },
-  {
-    name: "Group B",
-    value: 300,
-  },
-  {
-    name: "Group C",
-    value: 300,
-  },
-  {
-    name: "Group D",
     value: 200,
   },
   {
+    name: "Group B",
+    value: 600,
+  },
+  {
+    name: "Group C",
+    value: 100,
+  },
+  {
+    name: "Group D",
+    value: 400,
+  },
+  {
     name: "Group E",
-    value: 278,
+    value: 500,
   },
   {
     name: "Group F",
@@ -156,11 +156,11 @@ export const data4bis = [
 export const data5bis = [
   {
     name: "Group A",
-    value: 2400,
+    value: 500,
   },
   {
     name: "Group B",
-    value: 4567,
+    value: 3067,
   },
   {
     name: "Group C",
@@ -168,14 +168,14 @@ export const data5bis = [
   },
   {
     name: "Group D",
-    value: 9800,
+    value: 1800,
   },
   {
     name: "Group E",
-    value: 3908,
+    value: 908,
   },
   {
     name: "Group F",
-    value: 4800,
+    value: 4500,
   },
 ];
