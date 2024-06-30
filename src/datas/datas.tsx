@@ -1,16 +1,16 @@
 export const data2 = [
-  { date: "2023-04-01", cashIn: 1926, cashOut: 1450 },
-  { date: "2023-04-02", cashIn: 3000, cashOut: 7235 },
-  { date: "2023-04-03", cashIn: 3000, cashOut: 8668 },
-  { date: "2023-04-04", cashIn: 4500, cashOut: 9559 },
-  { date: "2023-04-05", cashIn: 6700, cashOut: 10000 },
-  { date: "2023-04-06", cashIn: 8000, cashOut: 10576 },
-  { date: "2023-04-07", cashIn: 10400, cashOut: 11010 },
-  { date: "2023-04-08", cashIn: 12000, cashOut: 11524 },
-  { date: "2023-04-09", cashIn: 13000, cashOut: 12000 },
-  { date: "2023-04-10", cashIn: 16000, cashOut: 12500 },
-  { date: "2023-04-11", cashIn: 17000, cashOut: 13712 },
-  { date: "2023-04-12", cashIn: 18000, cashOut: 14011 },
+  { date: "2024-04-01", cashIn: 1926, cashOut: 1450 },
+  { date: "2024-04-02", cashIn: 3000, cashOut: 7235 },
+  { date: "2024-04-03", cashIn: 3000, cashOut: 8668 },
+  { date: "2024-04-04", cashIn: 4500, cashOut: 9559 },
+  { date: "2024-04-05", cashIn: 6700, cashOut: 10000 },
+  { date: "2024-04-06", cashIn: 8000, cashOut: 10576 },
+  { date: "2024-04-07", cashIn: 10400, cashOut: 11010 },
+  { date: "2024-04-08", cashIn: 12000, cashOut: 11524 },
+  { date: "2024-04-09", cashIn: 13000, cashOut: 12000 },
+  { date: "2024-04-10", cashIn: 16000, cashOut: 12500 },
+  { date: "2024-04-11", cashIn: 17000, cashOut: 13712 },
+  { date: "2024-04-12", cashIn: 18000, cashOut: 14011 },
 ];
 
 export const data = [
@@ -27,6 +27,18 @@ export const data = [
   { date: "2023-04-11", cashIn: 17000, cashOut: 11712 },
   { date: "2023-04-12", cashIn: 18000, cashOut: 12811 },
 ];
+export const dataDescription = {
+  title: "Cash Flow",
+  description1: "Forte reprise des bleus après la chute en milieu d'Année",
+  description2:
+    "Après un début de saison difficile, les bleus se re-saisissent et reprennent le dessus",
+};
+export const data2Description = {
+  title: "Texte 2",
+  description1: "Lorem ipsum dolores et sit amet",
+  description2:
+    "Lorem ipsum dolores et sit amet, consectetur adipiscing elit. Nullam",
+};
 
 export const data3 = [
   {

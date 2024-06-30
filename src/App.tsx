@@ -15,6 +15,8 @@ import CustomPieChart from "./components/CustomPieChart";
 
 import {
   data,
+  dataDescription,
+  data2Description,
   data2,
   data3,
   data3bis,
@@ -25,6 +27,8 @@ import {
 } from "./datas/datas";
 
 import { useState } from "react";
+import CardSlot from "./components/CardSlot";
+import { CardSlotGeneric } from "./components/CardSlotGeneric";
 
 function App() {
   const styleBt =
@@ -40,9 +44,32 @@ function App() {
       <div className="min-h-screen bg-slate-950">
         <div id="grid" className="   bg-slate-900 overflow-hidden py-20">
           <div className="grid gap-4 px-4 max-w-screen-xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 m-auto text-slate-600">
+            <CardSlotGeneric
+              title="Données 2021"
+              description="Lorem ipsum dolores et sit amet"
+            >
+              {/* <CustomAreaChartCurves data={data} /> */}
+              <CustomBarChart data={data3} />
+            </CardSlotGeneric>
+            <CardSlot
+              dataDescription={dataDescription}
+              data1={data}
+              data2={data2}
+              btTitle1="2023"
+              btTitle2="2024"
+            />
+            <CardSlot dataDescription={dataDescription} data1={data} />
+            <CardSlot
+              dataDescription={data2Description}
+              data1={data}
+              data2={data2}
+              btTitle1="data"
+              btTitle2="data2"
+            />
+
             <div className="flex items-center flex-col justify-center border  rounded-md border-slate-700 hover:border-slate-950 bg-slate-900 hover:bg-slate-950 pt-8 hover:pt-7 pb-0 hover:pb-1 transition-all">
               <div className="px-4 text-slate-400 font-light mb-4 h-28">
-                <h1 className="text-xl">Données 2021</h1>
+                <h1 className="text-xl">Données 20221</h1>
                 <h2>
                   {!bt
                     ? "Forte reprise des bleus après la chute en milieu d'Année"
